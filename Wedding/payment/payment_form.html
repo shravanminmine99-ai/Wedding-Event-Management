@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+            padding: 40px;
+        }
+        .container {
+            max-width: 500px;
+            background: #fff;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="number"],
+        input[type="date"],
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-top: 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Submit Payment</h2>
+    <form action="insert_payment.php" method="POST">
+        <label for="client_id">Client ID:</label>
+        <input type="number" name="client_id" required>
+
+        <label for="amount_paid">Amount Paid:</label>
+        <input type="number" name="amount_paid" step="0.01" required>
+
+        <label for="payment_date">Payment Date:</label>
+        <input type="date" name="payment_date" required>
+
+        <label for="payment_method">Payment Method:</label>
+        <input type="text" name="payment_method" maxlength="50" required>
+
+        <label for="remarks">Remarks:</label>
+        <textarea name="remarks" rows="4" placeholder="Optional..."></textarea>
+
+        <input type="submit" value="Submit Payment">
+    </form>
+</div>
+
+</body>
+</html>

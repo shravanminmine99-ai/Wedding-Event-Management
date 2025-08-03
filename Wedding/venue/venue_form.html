@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Venue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+             background-image: linear-gradient(to right,#3F2B96 0%, #A8C0FF 100%);
+            padding: 40px;
+        }
+        
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Add a New Venue</h2>
+    <form action="insert_venue.php" method="POST">
+        <label for="venue_name">Venue Name:</label>
+        <input type="text" id="venue_name" name="venue_name" required>
+
+        <label for="location">Location:</label>
+        <textarea id="location" name="location" required></textarea>
+
+        <label for="capacity">Capacity:</label>
+        <input type="number" id="capacity" name="capacity" required>
+
+        <label for="cost">Cost:</label>
+        <input type="number" step="0.01" id="cost" name="cost" required>
+
+        <input type="submit" value="Add Venue">
+    </form>
+</div>
+</body>
+</html>

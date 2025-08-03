@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f4f4;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.sidebar a,
+.sidebar form button {
+    display: block;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border: none;
+    background: none;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sidebar a:hover,
+.sidebar form button:hover {
+    background-color: #495057;
+}
+
+.logout-button {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 40px;
+}
+
+.content {
+    margin-left: 220px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+/* Section Backgrounds */
+#dashboard { background-color: #f0f8ff; }   /* Light Blue */
+#clients   { background-color: #fff0f5; }   /* Light Pink */
+#events    { background-color: #f5fff0; }   /* Light Green */
+#staff     { background-color: #fef9e7; }   /* Light Yellow */
+#vendors   { background-color: #f0ffff; }   /* Light Cyan */
+#venues    { background-color: #f3e5f5; }   /* Light Purple */
+#payments  { background-color: #fdf5e6; }   /* Light Beige */
+
+.card-container {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+}
+
+.hidden {
+    display: none;
+}
